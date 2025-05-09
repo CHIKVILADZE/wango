@@ -5,7 +5,8 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "types": ["node", "express"],
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "types": ["node", "jest", "express"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.test.ts"]
 }
