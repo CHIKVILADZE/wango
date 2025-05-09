@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import background from '../assets/background.jpg';
 import { useUser } from '../context/UserContext';
 import { fetchCities } from '../services/city.service';
 import { startParking, stopParking, getUserParkings } from '../services/parking.service';
+import type { City } from '../types/city.interface';
 
 function Home() {
   const navigate = useNavigate();
   const { user } = useUser();
 
-  interface City {
-    id: string;
-    name: string;
-    parkingAreas: { id: string; name: string }[];
-  }
+ 
 
   const [cities, setCities] = useState<City[]>([]);
   const [selectedCityId, setSelectedCityId] = useState('');

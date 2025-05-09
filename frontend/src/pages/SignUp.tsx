@@ -2,13 +2,9 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import axios from '../api/axios';
+import type { SignUpForm } from '../types/user.interface';
 
-interface SignUpForm {
-  email: string;
-  fullName: string;
-  address: string;
-  carPlate: string;
-}
+
 
 function SignUp() {
   const navigate = useNavigate();
