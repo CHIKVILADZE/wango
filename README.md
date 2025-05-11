@@ -41,3 +41,16 @@ To populate the database with sample cities and parking areas, use the Prisma se
 
 ```bash
 npx prisma db seed
+
+
+ Environment Variables:
+ Frontend (frontend/.env)
+ VITE_API_URL=http://localhost:5000/api
+
+Backend (backend/.env)
+DATABASE_URL="postgresql://<username>:<password>@localhost:5432/<database_name>?schema=public"
+Replace <username>, <password>, and <database_name> with your local PostgreSQL configuration.
+
+
+
+
